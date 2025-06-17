@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食网站活动规则说明</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafaf9;
+            color: #292524;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            line-height: 1.2;
+            color: #92400e;
+            text-align: center;
+            margin: 2rem 0;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            line-height: 1.2;
+            color: #c2410c;
+            margin: 1.5rem 0 0.5rem;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        p {
+            font-size: clamp(1rem, 3vw, 1.125rem);
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            background-color: #ea580c;
+            color: white;
+            border-radius: 0.375rem;
+            margin-right: 0.75rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c2410c;
+            transform: scale(1.05);
+        }
+
+        #按钮 {
+            text-align: center;
+            margin-top: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>美食网站活动规则说明</h1>
+        <h2>一、野餐争霸战</h2>
+        <p>这是一场趣味十足的美食较量！活动期间，各位美食达人需在户外野餐场景下展开比拼。可精心筹备独特的野餐美食，如创意三明治叠叠乐、水果串塔等，同时注重野餐场景的布置，用鲜花、餐布打造出最具氛围感的野餐角落。活动设有线上投票环节，网友投票决定谁是真正的野餐霸主，获胜者将赢取丰厚奖品。</p>
+        <h2>二、厨房闪电侠</h2>
+        <p>聚焦快手美食挑战，鼓励大家在有限时间内制作出美味佳肴。可参考下厨房平台“闪电侠”菜谱集合的灵感，挑战1分钟零失败三汁焖锅、懒人番茄牛肉、可乐鸡翅等经典菜肴。活动期间，分享快手美食制作过程、成品照片及烹饪心得，参与话题互动，就有机会获得厨房神器。</p>
+        <h2>三、舌尖东南亚</h2>
+        <p>带你领略东南亚美食的独特魅力！活动期间推出一系列东南亚美食专题，大家可分享泰国冬阴功汤、越南春卷、印尼咖喱菜肴等美食的制作经验与烹饪秘诀。同时，网站会邀请美食博主直播制作东南亚美食，并举办东南亚美食评选活动，让大家足不出户感受东南亚美食风情。</p>
+        <h2>四、便当侦探社</h2>
+        <p>美食与解谜的奇妙结合！活动中，大家以便当为主题，创作美食故事或谜题。可以编写剧情，让主角通过便当里食物的线索解开神秘案件；也可以设计解谜游戏，让网友根据便当食物细节猜测背后的故事或完成特定任务。提交的优秀作品将在网站首页展示，作者还有机会获得美食侦探大礼包。</p>
+        <h2>五、爱心投喂日</h2>
+        <p>用美食传递温暖与爱意！在指定的爱心投喂日，鼓励大家为亲朋好友精心准备爱心美食，如父母为孩子制作可爱又营养的便当，情侣间亲手制作甜蜜点心。同时，支持公益性质的爱心投喂，志愿者可分享为孤寡老人、贫困儿童送去爱心食物的过程与温暖瞬间。活动期间，分享爱心投喂故事、美食照片，参与爱心打卡。</p>
+    </div>
+    <div id="按钮">
+        <button id="agreeButton" onclick="window.location.href='index.html'">同意</button>
+        <button id="closeButton" onclick="window.location.href='index.html'">关闭</button>
+    </div>
+    <script>
+        document.getElementById('closeButton').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+        document.getElementById('agreeButton').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+
+</html>
+    

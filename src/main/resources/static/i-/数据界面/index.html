@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>美食天地</title>
+    <!-- <meta http-equiv="refresh" content="1"> This tag refreshes the page every second. Uncomment if auto-refresh is needed. -->
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/can.js"></script>
+    <script src="js/china.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/beihai.js"></script>
+</head>
+
+<body>
+    <div id="scale-container">
+    <div class="content">
+        <!-- 底层背景动画-开始 -->
+        <div id="animations">
+            <div class="animation animation1">
+                <div class="animate1"></div>
+                <div class="animate2"></div>
+                <div class="animate3"></div>
+            </div>
+            <div class="animation animation2">
+                <div class="animate1"></div>
+                <div class="animate2"></div>
+                <div class="animate3"></div>
+            </div>
+            <div class="animation animation3 fanzhuan">
+                <div class="animate1"></div>
+                <div class="animate2"></div>
+                <div class="animate3"></div>
+            </div>
+            <div class="animation animation4">
+                <div class="animate1"></div>
+                <div class="animate2"></div>
+                <div class="animate3"></div>
+            </div>
+            <div class="animation animation5 fanzhuan">
+                <div class="animate1"></div>
+                <div class="animate2"></div>
+                <div class="animate3"></div>
+            </div>
+            <div class="animation animation6">
+                <div class="animate1"></div>
+                <div class="animate2"></div>
+                <div class="animate3"></div>
+            </div>
+            <div class="animation animation7 fanzhuan">
+                <div class="animate1"></div>
+                <div class="animate2"></div>
+                <div class="animate3"></div>
+            </div>
+            <div class="animation animation8">
+                <div class="animate1"></div>
+                <div class="animate2"></div>
+                <div class="animate3"></div>
+            </div>
+            <div class="animation animation9 fanzhuan">
+                <div class="animate1"></div>
+                <div class="animate2"></div>
+                <div class="animate3"></div>
+            </div>
+            <div class="animation animation10">
+                <div class="animate1"></div>
+                <div class="animate2"></div>
+                <div class="animate3"></div>
+            </div>
+        </div>
+        <!-- 底层背景动画-开始 -->
+        <!-- 显示屏头部开始 -->
+        <div id="head">
+            <!-- 时间日期 -->
+            <div class="getDate">
+                <span id="time">09:00:00</span>
+                <span id="week">星期三</span>
+                <span id="year">2018-07-28</span>
+            </div>
+            <!-- 天气状况 -->
+            <div class="weather">
+                <span id="sky">多云</span>
+                <span id="temperatur">35~28度</span>
+                <span id="air">空气质量</span>
+                <span id="state">优</span>
+            </div>
+            <!-- 返回主页按钮 -->
+            <div class="navigation-button">
+                <a href="../易食记.html" class="styled-button">返回主页</a>
+            <!-- 大标题 -->
+            <h1> 美食世界的精彩数据</h1>
+    </div>
+        </div>
+        <!-- 显示屏头部结束 -->
+        <!-- 显示屏中间-开始-->
+        <div id="body">
+            <div class="bodyLeft rel">
+                <div class="bodyLeftTop">
+                    <div class="childtitle"><h2>各区域美食菜品数</h2></div>
+                    <div class="add" onclick="Show(this,'bodyLeft',2.8,'before')">+</div>
+                    <!-- 数据中心-开始 -->
+                    <div class="dataCenter clear"><ul class="Data"></ul></div>
+                    <!-- 数据中心-开始 -->
+                    <div id="guapai" class="guapai"></div>
+                    <!-- 美食菜品实时监控-开始 -->
+                    <div class="yuyue">
+                        <div class="yuyuejiankong">
+                            <div id="left-top-right" class="bodyLeftTopGPZB">
+                                <div class="GPZB">
+                                    <ul></ul>
+                                    <p>男性用户喜爱菜品<span></span></p>
+                                </div>
+                                <div class="GPZB">
+                                    <ul></ul>
+                                    <p>女性用户喜爱菜品<span></span></p>
+                                </div>
+                                <div class="GPZB">
+                                    <ul></ul>
+                                    <p>所有共同喜欢菜品<span></span></p>
+                                </div>
+                            </div>
+                            <div id="left-top-right-circle" class="left-top-right-circle"></div>
+                        </div>
+                    </div>
+                    <!-- 美食菜品实时监控-结束 -->
+                </div>
+                <div class="bodyLeftBottom rel">
+                    <div class="add" onclick="Show(this,'bodyLeft',2.8,'after')">+</div>
+                    <div class="bodyLeftBottomLeft">
+                        <div class="childtitle"><h2>美食种类总数</h2></div>
+                        <div id="left-bottom"></div>
+                    </div>
+                    <!-- 月美食种类数量-开始 -->
+                    <div class="bodyLeftBottomRight rel">
+                        <div class="childtitle"><h2>月美食种类数量</h2></div>
+                        <div class="t-right" >
+                            <ul id="cp">
+                                <li class="line"></li>
+                                <li>
+                                    <span>一月</span>
+                                    <div>
+                                        <p><i></i><span></span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>二月</span>
+                                    <div>
+                                        <p><i></i><span></span></p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <span>三月</span>
+                                    <div>
+                                        <p><i></i><span></span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>四月</span>
+                                    <div>
+                                        <p><i></i><span></span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>五月</span>
+                                    <div>
+                                        <p><i></i><span></span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>六月</span>
+                                    <div>
+                                        <p><i></i><span></span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>七月</span>
+                                    <div>
+                                        <p class="active"><i></i><span></span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>八月</span>
+                                    <div>
+                                        <p><i></i><span></span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>九月</span>
+                                    <div>
+                                        <p><i></i><span></span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>十月</span>
+                                    <div>
+                                        <p><i></i><span></span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>十一月</span>
+                                    <div>
+                                        <p><i></i><span></span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>十二月</span>
+                                    <div>
+                                        <p><i></i><span></span></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 月美食种类数量-结束 -->
+                </div>
+            </div>
+            <div class="bodyMiddle rel">
+                <div class="bodyMiddleChild">
+                    <div class="add" onclick="Show(this,'bodyMiddle',1.8,'after')">+</div>
+                    <div class="childtitle"><h2>特色美食地域分布</h2></div>
+                    <div class="navbar">
+                        <span class="active">全国分布</span>
+                        <span>热门城市</span>
+                        <span>趋势分析</span>
+                    </div>
+                    <!-- 分布区域-开始 -->
+                    <div class="mapmain">
+                        <!-- 特色美食地域分布数据-开始 -->
+                        <div><ul id="list"></ul></div>
+                        <!-- 特色美食地域分布数据-开始 -->
+                        <!-- 中国地图-开始 -->
+                        <div class="map" id="map"></div>
+                        <!-- 中国地图-结束 -->
+                        <!-- 热门城市地图-开始 -->
+                        <div class="map" id="map1"></div>
+                        <!-- 热门城市地图-结束 -->
+                        <!-- 趋势分析图-开始 -->
+                        <div class="map" id="map2"></div>
+                        <!-- 趋势分析图-结束 -->
+                    </div>
+                    <!-- 分布区域-结束 -->
+                    <!-- 地图下面亮光动画-开始 -->
+                    <div id="sun"></div>
+                    <!-- 地图下面亮光动画-结束 -->
+                </div>
+            </div>
+            <div class="bodyRight">
+                <!-- 美食介绍实时动态滚动-开始 -->
+                <div class="bodyRightTop rel">
+                    <div class="childtitle"><h2>美食介绍实时动态</h2></div>
+                    <div class="navbar">
+                        <span>中餐板块</span>
+                        <span class="active">西餐板块</span> <!-- 默认选择西餐板块 -->
+                        <span>快餐板块</span>
+                        <span>甜品板块</span>
+                    </div>
+                    <div class="add" onclick="Show(this,'bodyRight',2.8,'before')">+</div>
+                    <div class="bodyRightTopBG">
+                        <div class="default">
+                            <span class="name">美食名称</span>
+                            <span class="intro">美食介绍</span>
+                        </div>
+                        <!-- 美食介绍数据-开始 -->
+                        <div class="liushuihaoul clear">
+                            <ul class="moveul">
+
+                            </ul>
+                        </div>
+                        <!-- 美食介绍数据-结束 -->
+                        <!-- 下方消息提示滚动-开始 -->
+                        <div class="call">
+                            <ul class="moveul">
+
+                            </ul>
+                        </div>
+                        <!-- 下方消息提示滚动-结束 -->
+                    </div>
+                </div>
+                <!-- 美食介绍实时动态滚动-结束 -->
+                <!-- 美食热度动态折线图-开始 -->
+                <div class="bodyRightBottom rel">
+                    <div class="childtitle"><h2>美食热度动态</h2></div>
+                    <div class="add" onclick="Show(this,'bodyRight',2.8,'after')">+</div>
+                    <div id="jiagezoushi"></div>
+                </div>
+                <!-- 美食热度动态折线图-结束 -->
+            </div>
+        </div>
+        <!-- 显示屏中间-结束 -->
+        <!-- 显示屏底部-开始-->
+        <div id="foot">
+            <!-- 餐厅热门美食实时监控-开始 -->
+            <div class="footparent0">
+                <div class="footChild">
+                    <div class="childtitle"><h2>热门美食实时监控</h2></div>
+                    <div class="add" onclick="Show(this,'footparent0',2.8,'after')">+</div>
+                    <!-- 今日热门美食数量-开始 -->
+                    <div class="huiYuanLst">
+                        <div class="yibiao" id="yibiao1"></div>
+                        <div class="huiyuan">
+                            <ul  class="fangkuai"></ul>
+                            <span></span>
+                            <p>今日热门美食数量</p>
+                        </div>
+                    </div>
+                    <!-- 今日热门美食数量-结束 -->
+                    <!-- 热门美食动态-开始 -->
+                    <div class="huiYuanLst">
+                        <span class="ruzhustatus">&nbsp;&nbsp;&nbsp;&nbsp;(热门美食动态)</span>
+                        <div class="contgundong">
+                            <ul class="moveul"></ul>
+                        </div>
+                    </div>
+                    <!-- 热门美食动态-结束 -->
+                    <!-- 今日新推美食数量-开始 -->
+                    <div class="huiYuanLst huiYuanLst3">
+                        <div class="yibiao" id="yibiao2"></div>
+                        <div class="huiyuan">
+                            <ul  class="fangkuai"></ul>
+                            <span></span>
+                            <p>今日新推美食数量</p>
+                        </div>
+                    </div>
+                    <!-- 今日新推美食数量-结束 -->
+                    <!-- 今日限量美食数量-开始 -->
+                    <div class="huiYuanLst">
+                        <div class="yibiao" id="yibiao3"></div>
+                        <div class="huiyuan">
+                            <ul class="fangkuai"></ul>
+                            <span></span>
+                            <p>今日限量美食数量</p>
+                        </div>
+                    </div>
+                    <!-- 今日限量美食数量-结束 -->
+                </div>
+            </div>
+            <!-- 餐厅热门美食实时监控-结束 -->
+            <!-- 热门餐厅美食动态-开始 -->
+            <div class="footparent1">
+                <div class="footChild">
+                    <div class="childtitle"><h2>热门美食动态</h2></div>
+                    <div class="add" onclick="Show(this,'footparent1',2.8,'after')">+</div>
+                    <div id="jiage"></div>
+                </div>
+            </div>
+            <!-- 热门餐厅美食动态-结束 -->
+            <!-- 餐厅美食热度实时监控-开始 -->
+            <div class="footparent2">
+                <div class="footChild">
+                    <div class="childtitle"><h2>美食热度实时监控</h2></div>
+                    <div class="add" onclick="Show(this,'footparent2',2.8,'after')">+</div>
+                    <!-- 各板块美食热度格子动画-开始 -->
+                    <div class="chengjiaoliang">
+                        <div class="CJL clear">
+                            <p></p>
+                            <span>中餐板块美食热度</span>
+                            <ul class="fangkuai"></ul>
+                        </div>
+                        <div class="CJL clear">
+                            <p></p>
+                            <span>西餐板块美食热度</span>
+                            <ul class="fangkuai"></ul>
+                        </div>
+                        <div class="CJL clear">
+                            <p></p>
+                            <span>快餐板块美食热度</span>
+                            <ul class="fangkuai"></ul>
+                        </div>
+                        <div class="CJL clear">
+                            <p></p>
+                            <span>甜品板块美食热度</span>
+                            <ul class="fangkuai"></ul>
+                        </div>
+                    </div>
+                    <!-- 各板块美食热度格子动画-开始 -->
+                    <div id="CJpie"></div>
+                </div>
+            </div>
+            <!-- 餐厅美食热度实时监控-结束 -->
+            <!-- 美食热度实时监控-开始 -->
+            <div class="footparent3">
+                <div class="footChild">
+                    <div class="childtitle"><h2>美食热度实时监控</h2></div>
+                    <div class="add" onclick="Show(this,'footparent3',2.8,'after')">+</div>
+                    <!-- 平均热度时间刻度轴-开始 -->
+                    <div id="timebar">
+                        <span id="pjtime">平均美食热度持续时间：</span>
+                        <ul class="kedu clear"></ul>
+                        <div class="kuang">
+                            <div class="tianchong"></div>
+                        </div>
+                    </div>
+                    <!-- 平均热度时间刻度轴-开始 -->
+                    <div id="cjliang"></div>
+                </div>
+            </div>
+            <!-- 美食热度实时监控-结束 -->
+            
+        </div>
+        <!-- 显示屏底部-结束 -->
+        <div class="mask">
+            <div class="maskContent"></div>
+        </div>
+    </div>
+    <!-- 添加按钮 -->
+    <!-- <div class="navigation-button">
+        <a href="../易食记.html" class="styled-button">返回主页</a>
+    </div> -->
+    </div>
+</body>
+
+</html>
+<style>
+    .navigation-button {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .styled-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007BFF;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    .styled-button:hover {
+        background-color: #0056b3;
+    }
+    #scale-container {
+    transform-origin: top left;
+}
+</style>
+<script src="js/index.js"></script>
+<style>
+    /* 限制页面滚动 */
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* 禁止滚动 */
+        width: 100%;
+        height: 100%;
+    }
+
+    #scale-container {
+        transform-origin: top left;
+        position: absolute; /* 确保容器不会影响其他布局 */
+        top: 0;
+        left: 0;
+    }
+</style>
+
+<script>
+    function scalePage() {
+        const designWidth = 3840; // 你的设计稿宽度
+        const designHeight = 2160; // 你的设计稿高度
+        const scaleWidth = window.innerWidth / designWidth;
+        const scaleHeight = window.innerHeight / designHeight;
+        const scale = Math.min(scaleWidth, scaleHeight); // 取较小的缩放比例
+
+        const container = document.getElementById('scale-container');
+        container.style.transform = `scale(${scale})`;
+        container.style.transformOrigin = 'top left';
+
+        // 动态调整容器大小，避免内容溢出
+        container.style.width = `${designWidth}px`;
+        container.style.height = `${designHeight}px`;
+
+        // 确保页面不会超出视口范围
+        document.body.style.width = `${window.innerWidth}px`;
+        document.body.style.height = `${window.innerHeight}px`;
+    }
+
+    // 防抖函数，避免频繁触发
+    function debounce(func, delay) {
+        let timer;
+        return function (...args) {
+            clearTimeout(timer);
+            timer = setTimeout(() => func.apply(this, args), delay);
+        };
+    }
+
+    // 绑定事件
+    window.addEventListener('resize', debounce(scalePage, 100)); // 防抖处理
+    window.addEventListener('DOMContentLoaded', scalePage);
+    window.addEventListener('load', scalePage); // 确保所有资源加载完成后再缩放
+</script>

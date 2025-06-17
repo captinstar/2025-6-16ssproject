@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+	<title>益食记</title>
+	
+	 <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+	<link href="css/contact-buttons.css" rel="stylesheet">
+	<link href="css/custom-style.css" rel="stylesheet" type="text/css">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery.min.js"></script>
+	
+	<!---pop-up-box---->
+	<script type="text/javascript" src="js/modernizr.custom.min.js"></script>    
+	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<!---//pop-up-box---->
+	<script>
+			$(document).ready(function() {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+			
+			});
+	</script>
+	<style>
+	    .answer-form {
+	        margin-top: 10px;
+	        display: flex;
+	        gap: 10px;
+	    }
+	    .answer-form input[type="text"] {
+	        padding: 8px;
+	        border: 1px solid #ddd;
+	        border-radius: 4px;
+	        flex-grow: 1;
+	    }
+	    .submit-btn {
+	        padding: 8px 16px;
+	        background-color: #db4b41;
+	        color: white;
+	        border: none;
+	        border-radius: 4px;
+	        cursor: pointer;
+	    }
+	    .submit-btn:hover {
+	        background-color: #da4b41;
+	    }
+	
+		    .qa-list {
+		        list-style: none;
+		        padding: 0;
+		        margin: 0;
+		    }
+		    .qa-list li {
+		        margin-bottom: 25px;
+		        padding-bottom: 15px;
+		        border-bottom: 1px dashed #eee;
+		    }
+		    .answer-field {
+		        display: flex;
+		        align-items: center;
+		        margin-top: 12px;
+		    }
+		    .underline-input {
+		        border-bottom: 2px solid #ff9a00;
+		        min-width: 250px;
+		        padding: 5px 8px;
+		        margin-right: 15px;
+		        outline: none;
+		        color: #333;
+		        position: relative;
+		    }
+		    .underline-input:empty:before {
+		        content: attr(data-placeholder);
+		        color: #aaa;
+		        position: absolute;
+		    }
+		    .submit-answer {
+		        background: #b2270b;
+		        color: white;
+		        border: none;
+		        padding: 6px 15px;
+		        border-radius: 4px;
+		        cursor: pointer;
+		        transition: all 0.3s;
+		    }
+		    .submit-answer:hover {
+		        background: #b2270b;
+		    }
+		
+	</style>
+</head>
+<body>	
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+	
+				</button>
+				<a class="navbar-brand" href="#">
+					<img src="images/logo.png" class="hidden-xs" alt="">
+					<h3 class="visible-xs">译食记</h3>
+				</a>
+			</div>
+			</style>
+			
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    <ul class="nav navbar-nav navbar-right">
+			        <li>
+			            <a class="page-scroll" href="index.html">译食记</a>
+			            <ul class="dropdown-menu">
+			                <li><a href="index.html#译食记">易食记</a></li>
+			                <li><a href="index.html#益食记">益食记</a></li>
+			                <li><a href="index.html#意食记">意食记</a></li>
+							<li><a href="index.html#逸食记">逸食记</a></li>
+			            </ul>
+			        </li>
+			        <li>
+			            <a class="page-scroll" href="易食记.html">易食记</a>
+			            <ul class="dropdown-menu">
+			                <li><a href="易食记.html#简单系列">简单系列</a></li>
+			                <li><a href="易食记.html#中等系列">中等系列</a></li>
+			                <li><a href="易食记.html#复杂系列">复杂系列</a></li>
+							<li><a href="易食记.html#高难度系列">高难度系列</a></li>
+			            </ul>
+			        </li>
+			        <li>
+			            <a class="page-scroll" href="益食记.html">益食记</a>
+			            <ul class="dropdown-menu">
+			                <li><a href="益食记.html#食补">食补</a></li>
+			                <li><a href="益食记.html#食补的典型实例">食补的典型实例</a></li>
+			                <li><a href="益食记.html#食补的主要功能">食补的主要功能</a></li>
+							<li><a href="益食记.html#食补的核心要素">食补的核心要素</a></li>
+			            </ul>
+			        </li>
+			        <li>
+			            <a class="page-scroll" href="index.html#意食记">意食记</a>
+			            <!-- <ul class="dropdown-menu">
+			                <li><a href="#">子项1</a></li>
+			                <li><a href="#">子项2</a></li>
+			                <li><a href="#">子项3</a></li>
+			            </ul> -->
+			        </li>
+			        <li>
+			            <a class="page-scroll" href="index.html#逸食记">逸食记</a>
+			            <!-- <ul class="dropdown-menu">
+			                <li><a href="#">子项1</a></li>
+			                <li><a href="#">子项2</a></li>
+			                <li><a href="#">子项3</a></li>
+			            </ul> -->
+			        </li>
+			        <li>
+			            <a class="page-scroll" href="悠食径.html">悠食径</a>
+			            <ul class="dropdown-menu">
+			                <li><a href="悠食径.html#contact_form">用户注册</a></li>
+			                <!-- <li><a href="#">子项2</a></li>
+			                <li><a href="#">子项3</a></li> -->
+			            </ul>
+			        </li>
+			    </ul>
+			</div>
+		</div>
+	</nav>
+	<!-- /////////////////////////////////////////Content -->
+	<div id="page-content" class="archives-page">
+		<div class="container">
+			<div class="row">
+				<div id="main-content" class="col-md-8">
+					<article>
+					    <div class="">
+					        <video controls width="640" height="360">
+					            <source src="mp4/WeChat_20241226151526.mp4" type="video/mp4">
+					            您的浏览器不支持 HTML5 视频播放。
+					        </video>
+					    </div>
+					</article>
+					<article>
+						<div class="art-header">
+							<a href="#"id="食补"><h2>食补</h2></a>
+						</div>
+						<p>
+							食补:全称为“食物调补”，是通过日常饮食摄取天然食材中的营养物质，以调节身体功能、预防疾病、恢复健康的一种方法。它属于中医养生和传统饮食文化的重要组成部分，强调通过“以食养生”的方式满足人体对营养的需求，增强体质，达到“药补不如食补”的健康目标。
+						</p>
+					</article>
+					<article>
+					    <div class="art-header">
+					        <a href="#" id="食补的典型实例"><h2>食补的典型实例</h2></a>
+					    </div>
+					    <div class="art-content-2 custom-layout">
+					        <ul>
+					            <li>
+					                <div class="item-container">
+					                    <img src="images/5-党参乌鸡汤.jpg" alt="党参乌鸡汤" />
+					                    <div class="text-container">
+					                        <h3>补气</h3>
+					                        <p><strong>党参乌鸡汤：</strong>党参乌鸡汤具有补气养血、健脾益肺、补益肝肾、养血安神、滋阴养颜等功效，可以改善乏力气短、脾虚食少、肺虚喘咳、肝肾亏虚、失眠多梦等症。</p>
+					                    </div>
+					                </div>
+					            </li>
+					            <li>
+					                <div class="item-container">
+					                    <img src="images/6-当归红枣鸡汤.jpg" alt="当归红枣鸡汤" />
+					                    <div class="text-container">
+					                        <h3>补血</h3>
+					                        <p><strong>当归红枣鸡汤：</strong>补血活血是当归红枣鸡汤的重要功效之一，这种汤品的所用的当归是一种可以补血活血的特色中药材，而红枣也是一种可以益气补血的特色食材，人们食用了用它们炖制的鸡汤以后，能起到十分出色的益气补血功效，对人类的血虚和贫血和手术后缺血等症状都有不错的滋补功效。</p>
+					                    </div>
+					                </div>
+					            </li>
+					            <li>
+					                <div class="item-container">
+					                    <img src="images/7-银耳莲子羹.jpg" alt="银耳莲子羹" />
+					                    <div class="text-container">
+					                        <h3>滋阴</h3>
+					                        <p><strong>银耳莲子羹：</strong>羹浓味甜，口感浓甜润滑，美味可口。此汤具养阴润肺，生津整肠之效，有润肺养胃、美容养颜的功能，适用于伴有涕中带血的鼻咽癌病人和女性朋友。</p>
+					                    </div>
+					                </div>
+					            </li>
+					            <li>
+					                <div class="item-container">
+					                    <img src="images/52-枸杞羊肉汤.jpg" alt="枸杞羊肉汤" />
+					                    <div class="text-container">
+					                        <h3>补阳</h3>
+					                        <p><strong>枸杞羊肉汤：</strong>食神在《冬日益肾补阳方：羊肉要分清体质吃》和《喝枸杞黄精汤明目》中，分别介绍了羊肉补肾、枸杞养肝明目的疗效，而今天把这2种食物搭配在一起，配上文火炖一炖，更加适合在冬季经期不调的女性朋友品尝。</p>
+					                    </div>
+					                </div>
+					            </li>
+					        </ul>
+					    </div>
+					</article>
+					<article>
+						<div class="art-header">
+							<a href="#"id="食补的主要功能"><h2>食补的主要功能</h2></a>
+						</div>
+						<div class="art-content-2">
+							<ul type="circle">
+								<li>
+									<p>预防疾病</p>
+									<li>
+										<p>通过膳食营养调节，增强免疫力，预防慢性病（如高血压、糖尿病）。</p>
+										<li>
+											<p>a.例如，秋冬吃羊肉可提高御寒能力，降低感冒风险。</p>
+										</li>
+									</li>
+								</li>
+							</ul>
+							<ul type="circle">
+								<li>
+									<p>恢复健康</p>
+									<li>
+										<p>病后或术后，通过食补加快身体恢复。</p>
+										<li>
+											<p>b.例如，鸡汤配枸杞可帮助补气血、恢复体力。</p>
+										</li>
+									</li>
+								</li>
+							</ul>
+							<ul type="circle">
+								<li>
+									<p>改善体质</p>
+									<li>
+										<p>针对气虚、血虚、寒性、热性体质进行调节，让身体达到平衡状态。</p>
+									</li>
+								</li>
+							</ul>
+							<ul type="circle">
+								<li>
+									<p>美容养颜</p>
+									<li>
+										<p>食补可以改善皮肤状态，延缓衰老。</p>
+										<li>
+											<p>c.例如，常吃富含胶原蛋白的银耳或猪蹄汤，有助于皮肤水润。</p>
+										</li>
+									</li>
+								</li>
+							</ul>
+							
+						</div>
+					</article>
+					<article>
+						<div class="art-header">
+							<a href="#"id="食补的核心要素"><h2>食补的核心要素</h2></a>
+						</div>
+						<div class="art-content-2">
+							<p>强调“食养为主”</p>
+							<ul>
+								<li><p>通过日常食物的自然属性（寒、热、温、凉）和功能（滋阴、补阳、益气、养血等），来调和身体的阴阳平衡。</p></li>
+								<li><p>相较于药补，食补更温和、持久，不容易产生副作用。</p></li>
+							</ul>
+							<p>针对性调理</p>
+							<ul>
+								<p>根据个人体质和健康状况，选择相应的食材进行补养。例如：</p>
+								<li>气虚体质<p>多吃益气的食物，如黄芪炖鸡汤、红枣粥。</p></li>
+								<li>阴虚体质<p>相较于药补，食补更温和、持久，不容易产生副作用。</p></li>
+								<li>阳虚体质<p>多吃温补的食物，如羊肉汤、姜枣茶。</p></li>
+							</ul>
+							<p>重视时节变化</p>
+							<ul>
+								<p>食补强调季节性调养，根据不同季节选择适合的食材：</p>
+								<li>春季<p>通过日常食物的自然属性（寒、热、温、凉）和功能（滋阴、补阳、益气、养血等），来调和身体的阴阳平衡。</p></li>
+								<li>夏季<p>相较于药补，食补更温和、持久，不容易产生副作用。</p></li>
+								<li>秋季<p>侧重滋阴润燥，如雪梨、银耳、蜂蜜。</p></li>
+								<li>冬季<p>侧重温补，常用羊肉、枸杞、生姜等温性食材。</p></li>
+							</ul>
+							<p>食材天然且多样化</p>
+							<ul>
+								<li><p>食补注重使用天然食材，如谷物、蔬果、肉类、药食同源食材（如枸杞、红枣、山药）。</p></li>
+								<li><p>食材搭配以营养均衡、相互增益为原则。</p></li>
+							</ul>
+							
+						</div>
+					</article>
+				</div>
+		
+				<div id="sidebar" class="col-md-4">
+					<div class="widget wid-about">
+						<div class="heading"><h4>关于我们</h4></div>
+						<div class="content">
+							<img src="images/logo.png" />
+							<p>关于i食记<br>i食记成立于2024年圣诞节期间，是一家专注于分享多元化美食做法及知识的菜谱网站。旨在为广大美食爱好者提供一个全面、专业且富有创意的美食学习与交流平台。<br />
+					        在i食记，我们相信美食的力量无处不在。无论是春节的团圆宴、情人节的浪漫晚餐、母亲节的温馨家宴，还是圣诞节的欢乐聚餐，我们都能为您提供丰富的菜谱选择和灵感。<br />
+							无论是日常食谱的轻松烹饪、宴客的精致佳肴、食疗养生的健康调理，还是海鲜大锅的鲜美滋味、沙发素食的清新可口、烘焙西点的甜蜜诱惑、异国菜系的独特风味，我们都能让您轻松驾驭，享受烹饪的乐趣。<br>
+					        i食记致力于让美食成为您生活中的一抹亮色，为您带来无尽的欢乐和满足。我们希望通过我们的平台，帮助您拥有更健康、更幸福的品质生活。在这里，您不仅可以学习到各种美食的制作方法，还可以与其他美食爱好者一起分享心得、交流经验，共同成长。<br>
+					        我们诚邀您加入i食记的美食大家庭，让我们一起成为或帮助其他小伙伴成为美食界的美食达人！无论您是烹饪新手还是资深大厨，都能在i食记找到属于自己的舞台，展现您的厨艺才华和美食热情。
+					     </p>
+						</div>
+					</div>
+					<div class="widget wid-tags">
+						<div class="heading"><h4>标签</h4></div>
+						<div class="content">
+							<ul class="list-inline">
+								<li><a href="#">主食</a></li>
+								<li><a href="#">副食</a></li>
+								<li><a href="#">甜品</a></li>
+								<li><a href="#">饮品</a></li>
+								<li><a href="#">海鲜</a></li>
+								<li><a href="#">蔬菜</a></li>
+								<li><a href="#">素食</a></li>
+								<li><a href="#">肉类</a></li>
+							</ul>
+						</div>
+						<div class="heading"><h4>最新主题</h4></div>
+						<div class="content">
+							<ul class="list-inline">
+								<li><a href="#">植物基饮食</a></li>
+								<li><a href="#">3D打印食物</a></li>
+								<li><a href="#">地方特色美食</a></li>
+								<li><a href="#">健康轻食</a></li>
+								<li><a href="#">融合菜系</a></li>
+								<li><a href="#">可持续餐饮</a></li>
+								<li><a href="#">素食主义</a></li>
+							</ul>
+							
+						</div>
+						
+						<div class="heading"><h4>食物相生相克</h4></div>
+						<div class="content">
+							<ul type="circle"">
+								<li>白菜+虾仁<p>两者同时吃可以预防便秘，白菜有较高的营养价值，虾仁含有丰富的钙、高蛋白等物质。</p></li>
+								<li>白萝卜+猪肉<p>白萝卜和猪肉同食对于脾胃有很好的消化作用。</p></li>
+								<li>香菇+豆腐<p>香菇与豆腐同食可以增强食欲、健脾养胃。</p></li>
+								<li>西瓜+羊肉<p>西瓜属于凉性水果，羊肉属于热性食物，两者同食可能会导致肠胃受损，出现腹痛、腹泻等症状。</p></li>
+								<li>柠檬+橘子<p>两者果酸较高，大量食用会促进胃酸分泌，导致胃酸过多，还可能引起消化道溃疡。</p></li>
+							</ul>
+							
+						</div>
+						<div class="heading"><h4>相关问答</h4></div>
+						<div class="content">
+							<ul >
+								<li><p>如何判断一个人的饮食是否营养均衡？</p></li>
+								<li><p>什么是食品营养？</p></li>
+								<li><p>什么是食品安全？</p></li>
+								<li><p>如何通过饮食来预防慢性疾病？</p></li>
+							</ul>
+						
+						</div>
+						<div class="heading"><h4>热门问答</h4></div>
+						<div class="content">
+						    <ul class="qa-list">
+						        <li>
+						            <p>中国传统美食中的"驴打滚"是哪一类小吃？</p>
+						            <div class="answer-field">
+						                <span class="underline-input" contenteditable="true" data-placeholder="点击输入答案"></span>
+						                <button class="submit-answer">提交</button>
+						            </div>
+						        </li>
+						        <li>
+						            <p>"花生糖"的制作主要使用哪一种特殊工艺？</p>
+						            <div class="answer-field">
+						                <span class="underline-input" contenteditable="true" data-placeholder="点击输入答案"></span>
+						                <button class="submit-answer">提交</button>
+						            </div>
+						        </li>
+						        <li>
+						            <p>苏州传统小吃"糖醋小排"主要采用哪一种烹饪方式？</p>
+						            <div class="answer-field">
+						                <span class="underline-input" contenteditable="true" data-placeholder="点击输入答案"></span>
+						                <button class="submit-answer">提交</button>
+						            </div>
+						        </li>
+						        <li>
+						            <p>"糍粑"是哪个地方的传统美食？</p>
+						            <div class="answer-field">
+						                <span class="underline-input" contenteditable="true" data-placeholder="点击输入答案"></span>
+						                <button class="submit-answer">提交</button>
+						            </div>
+						        </li>
+						    </ul>
+						</div>
+						
+						
+						
+						<script>
+						    document.querySelectorAll('.submit-answer').forEach(button => {
+						        button.addEventListener('click', function() {
+						            const input = this.previousElementSibling;
+						            const answer = input.innerText.trim();
+						            const question = input.closest('li').querySelector('p').innerText;
+						            
+						            if(!answer) {
+						                alert('请输入您的答案');
+						                return;
+						            }
+						            
+						            alert(`问题："${question}"\n您的答案："${answer}"\n提交成功！`);
+						           
+						        });
+						    });
+						</script>
+						<div class="heading"><h4>最新回答</h4></div>
+						<div class="content">
+						    <ul>
+						        <li>
+						            <p>冬季养生小知识中，哪种食材有"素中之荤"的称号？</p>
+						            <form class="answer-form">
+						                <input type="text" name="answer1" placeholder="请输入您的答案">
+						                <button type="submit" class="submit-btn">提交</button>
+						            </form>
+						        </li>
+						        
+						        <li>
+						            <p>香醋通常以哪种粮食作为主要原料？</p>
+						            <form class="answer-form">
+						                <input type="text" name="answer3" placeholder="请输入您的答案">
+						                <button type="submit" class="submit-btn">提交</button>
+						            </form>
+						        </li>
+						       
+						    </ul>
+						</div>
+						
+				
+						
+						<script>
+						    document.querySelectorAll('.answer-form').forEach(form => {
+						        form.addEventListener('submit', function(e) {
+						            e.preventDefault();
+						            const answer = this.querySelector('input[type="text"]').value;
+						            if(answer.trim() === '') {
+						                alert('请输入答案');
+						                return;
+						            }
+						            alert('答案已提交: ' + answer);
+						            
+						        });
+						    });
+						</script>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+
+	<a id='backTop'>Back To Top</a>
+
+
+	
+	
+		<div class="coppy-right">
+			<div class="wrap-footer">
+				<div class="clearfix">
+					<div class="col-md-6 col-md-offset-3">
+						<p>Copyright &copy; 2024i食记 陕西省咸阳市秦都区陕西国际商贸学院信息工程学院</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!-- Footer -->
+		
+		<!-- Core JavaScript Files -->
+	    <script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.backTop.min.js"></script>
+		<script></script>
+			$(document).ready( function() {
+				$('#backTop').backTop({
+					'position' : 1200,
+					'speed' : 500,
+					'color' : 'red',
+				});
+			});
+		</script>
+		<script src="js/jquery.contact-buttons.js"></script>
+		<script src="js/demo.js"></script>
+	</body>
+	</html>
+
+
+

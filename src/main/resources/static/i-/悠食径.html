@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<title>悠食径</title>
+
+		<!-- Bootstrap Core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- Custom Theme files -->
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/contact-buttons.css" rel="stylesheet">
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!---pop-up-box---->
+		<script type="text/javascript" src="js/modernizr.custom.min.js"></script>
+		<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+		<!---//pop-up-box---->
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+				});
+
+			});
+			
+	
+			function validateForm() {
+			    // 获取表单元素
+			    var name = document.getElementById('name').value;
+			    var email = document.getElementById('email').value;
+			    var agreeCheckbox = document.getElementById('agreeCheckbox').checked;			    
+			    // 检查必填字段
+			    if (name === '' || email === '' || !agreeCheckbox) {
+			        alert('您必须填入相关信息并同意协议');
+			        return false; // 阻止表单提交
+			    }			    
+			    // 显示成功提示
+			    alert('您提交成功！');
+			    
+			    // 阻止表单实际提交（仅演示用）
+			    // 实际应用中应删除下面这行，让表单正常提交
+			    event.preventDefault();  
+			    // 点击确定后刷新页面
+			    setTimeout(function() {
+			        window.location.reload();
+			    }, 100);		    
+			    return false; // 阻止表单默认提交行为
+			}
+		
+
+			
+		</script>
+	</head>
+	<body>
+		<!-- /////////////////////////////////////////Navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+		
+					</button>
+					<a class="navbar-brand" href="#">
+						<img src="images/logo.png" class="hidden-xs" alt="">
+						<h3 class="visible-xs">译食记</h3>
+					</a>
+				</div>
+				</style>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a class="page-scroll" href="index.html">译食记</a>
+							<ul class="dropdown-menu">
+								<li><a href="index.html#译食记">译食记</a></li>
+								<li><a href="index.html#益食记">益食记</a></li>
+								<li><a href="index.html#意食记">意食记</a></li>
+								<li><a href="index.html#逸食记">逸食记</a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="page-scroll" href="易食记.html">易食记</a>
+							<ul class="dropdown-menu">
+								<li><a href="易食记.html#简单系列">简单系列</a></li>
+								<li><a href="易食记.html#中等系列">中等系列</a></li>
+								<li><a href="易食记.html#复杂系列">复杂系列</a></li>
+								<li><a href="易食记.html#高难度系列">高难度系列</a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="page-scroll" href="益食记.html">益食记</a>
+							<ul class="dropdown-menu">
+								<li><a href="益食记.html#食补">食补</a></li>
+								<li><a href="益食记.html#食补的典型实例">食补的典型实例</a></li>
+								<li><a href="益食记.html#食补的主要功能">食补的主要功能</a></li>
+								<li><a href="益食记.html#食补的核心要素">食补的核心要素</a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="page-scroll" href="index.html#意食记">意食记</a>
+							<!-- <ul class="dropdown-menu">
+								<li><a href="#">子项1</a></li>
+								<li><a href="#">子项2</a></li>
+								<li><a href="#">子项3</a></li>
+							</ul> -->
+						</li>
+						<li>
+							<a class="page-scroll" href="index.html#逸食记">逸食记</a>
+							<!-- <ul class="dropdown-menu">
+								<li><a href="#">子项1</a></li>
+								<li><a href="#">子项2</a></li>
+								<li><a href="#">子项3</a></li>
+							</ul> -->
+						</li>
+						<li>
+							<a class="page-scroll" href="悠食径.html">悠食径</a>
+							<ul class="dropdown-menu">
+								<li><a href="悠食径.html#contact_form">用户注册</a></li>
+								<!-- <li><a href="#">子项2</a></li>
+								<li><a href="#">子项3</a></li> -->
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<header id="intro">
+			<!-- Carousel -->
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				</ol>
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<img src="images/1.jpg" alt="First slide">
+						<!-- Static Header -->
+						<div class="header-text hidden-xs">
+							<div class="col-md-12 text-center">
+								<br>
+								<h3>i食记，成立于2024年圣诞节，是一家专注于分享多元化美食做法及知识的菜谱网站。</h3>
+								<br>
+								<div class="">
+									<a class="btn btn-1 btn-sm" href="#about">关于我们</a><a class="btn btn-1 btn-sm" href="数据界面/index.html">数据界面</a><a class="btn btn-1 btn-sm"
+                                                                                                                                                                href="#about">Our works</a>
+								</div>
+							</div>
+						</div><!-- /header-text -->
+					</div>
+					<div class="item">
+						<img src="images/2.jpg" alt="Second slide">
+						<!-- Static Header -->
+						<div class="header-text hidden-xs">
+							<div class="col-md-12 text-center">
+								<br />
+								<h3>我们致力于为广大美食爱好者打造一个全面、专业且富有创意的美食学习与交流平台。</h3>
+								<br>
+								<div class="">
+									<a class="btn btn-1 btn-sm" href="#about">关于我们</a><a class="btn btn-1 btn-sm"
+										href="#about">Our works</a>
+								</div>
+							</div>
+						</div><!-- /header-text -->
+					</div>
+					<div class="item">
+						<img src="images/3.jpg" alt="Third slide">
+						<!-- Static Header -->
+						<div class="header-text hidden-xs">
+							<div class="col-md-12 text-center">
+								<br>
+								<h3> 我们诚邀您加入i食记的美食大家庭，一起成为美食达人！</h3>
+								<br>
+								<div class="">
+									<a class="btn btn-1 btn-sm" href="#about">关于我们</a><a class="btn btn-1 btn-sm"
+										href="#about">Our works</a>
+								</div>
+							</div>
+						</div><!-- /header-text -->
+					</div>
+				</div>
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div><!-- /carousel -->
+		</header>
+
+		<a id='backTop'>Back To Top</a>
+		<!-- /Back To Top -->
+
+		<!-- /////////////////////////////////////////Content -->
+		<div id="page-content" class="archives-page">
+			<div class="container">
+				<div class="row">
+					<div id="main-content" class="col-md-8">
+						<article class="contact">
+							<div class="art-header">
+								<h2 class="center">联系我们</h2>
+							</div>
+							<div class="art-content">
+							    <div id="contact_form">
+							        <form name="form1" id="ff" method="post" action="contact.php" onsubmit="return validateForm()">
+							            <label>
+							                <span>请输入你的名字：</span>
+							                <input type="text" name="name" id="name" required>
+							            </label>
+							            <label>
+							                <span>请输入你的账户：</span>
+							                <input type="email" name="email" id="email" required>
+							            </label>
+							            <div id="agree">
+							                <input type="checkbox" id="agreeCheckbox" name="agreeCheckbox" required>
+							                <label for="agreeCheckbox">登录即代表你同意i食记 
+							                    <a href="用户协议.html" target="_blank">《用户协议》</a> 和 
+							                    <a href="隐私政策.html" target="_blank">《隐私政策》</a>
+							                </label>
+							            </div>
+							            
+							            <center>
+							                <input class="sendButton" type="submit" name="Submit" value="Submit">
+							            </center>
+							        </form>
+							    </div>
+							</div>
+							<div class="widget wid-posts">
+								<div class="heading">
+									<h4>受欢迎的帖子</h4>
+								</div>
+								<div class="content">
+									<ul class="list-inline">
+										<div class="post">
+											<a href="#"><img src="images/53-红烧排骨.jpg" /></a>
+											<div class="wrapper">
+												<h5><a href="#">甲同学</a></h5>
+												<p>December 1, 2024</p>
+											</div>
+										</div>
+										<div class="post">
+											<a href="#"><img src="images/54-水煮肉片.jpg" /></a>
+											<div class="wrapper">
+												<h5><a href="#">乙同学</a></h5>
+												<p>December 1, 2024</p>
+											</div>
+										</div>
+										<div class="post">
+											<a href="#"><img src="images/55-小龙虾.jpg" /></a>
+											<div class="wrapper">
+												<h5><a href="#">丙同学</a></h5>
+												<p>December 1, 2024</p>
+											</div>
+										</div>
+										<div class="post">
+											<a href="#"><img src="images/56-排骨汤.jpg" /></a>
+											<div class="wrapper">
+												<h5><a href="#">丁同学</a></h5>
+												<p>December 1, 2024</p>
+											</div>
+										</div>
+										<div class="post">
+											<a href="#"><img src="images/57-小鸡炖蘑菇.jpg" /></a>
+											<div class="wrapper">
+												<h5><a href="#">戊同学</a></h5>
+												<p>December 1, 2024</p>
+											</div>
+										</div>
+									</ul>
+								</div>
+							</div>
+							<div class="widget wid-gallery">
+								<div class="heading">
+									<h4>作品展示</h4>
+								</div>
+								<div class="content">
+									<div class="row">
+										<div class="col-xs-4">
+											<a href="#"><img src="images/58-吊梨汤.jpg"></a>
+											<a href="#"><img src="images/59-红豆粥.jpg"></a>
+											<a href="#"><img src="images/60-山楂里脊肉.jpg"></a>
+										</div>
+										<div class="col-xs-4">
+											<a href="#"><img src="images/61-烧鹅.jpg"></a>
+											<a href="#"><img src="images/62-土豆牛肉.jpg"></a>
+											<a href="#"><img src="images/63-炒香菇.jpg"></a>
+										</div>
+										<div class="col-xs-4">
+											<a href="#"><img src="images/64-牛排.jpg"></a>
+											<a href="#"><img src="images/65-炸鸡块.jpg"></a>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div id="sidebar" class="col-md-4">
+						<div class="widget wid-about">
+							<div class="heading">
+								<h4>关于我们</h4>
+							</div>
+							<div class="content">
+								<img src="images/logo.png" />
+								<p>关于i食记<br>i食记成立于2024年圣诞节期间，是一家专注于分享多元化美食做法及知识的菜谱网站。旨在为广大美食爱好者提供一个全面、专业且富有创意的美食学习与交流平台。<br />
+									在i食记，我们相信美食的力量无处不在。无论是春节的团圆宴、情人节的浪漫晚餐、母亲节的温馨家宴，还是圣诞节的欢乐聚餐，我们都能为您提供丰富的菜谱选择和灵感。<br />
+									i食记致力于让美食成为您生活中的一抹亮色，为您带来无尽的欢乐和满足。我们希望通过我们的平台，帮助您拥有更健康、更幸福的品质生活。在这里，您不仅可以学习到各种美食的制作方法，还可以与其他美食爱好者一起分享心得、交流经验，共同成长。<br>
+								</p>
+							</div>
+						</div>
+						<div class="widget wid-tags">
+							<div class="heading">
+								<h4>标签</h4>
+							</div>
+							<div class="content">
+								<ul class="list-inline">
+									<li><a href="#">主食</a></li>
+									<li><a href="#">副食</a></li>
+									<li><a href="#">甜品</a></li>
+									<li><a href="#">饮品</a></li>
+									<li><a href="#">海鲜</a></li>
+									<li><a href="#">蔬菜</a></li>
+									<li><a href="#">素食</a></li>
+									<li><a href="#">肉类</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="widget wid-archive">
+						    <div class="heading">
+						        <h4>时令美食</h4>
+						    </div>
+						    <div class="content">
+						        <select>
+						            <option value="all" selected>选择时令月份</option>
+						            <option value="spring">春季限定</option>
+						            <option value="summer">夏季美食</option>
+						            <option value="autumn">秋季特选</option>
+						            <option value="winter">冬季暖食</option>
+						        </select>
+						    </div>
+						</div>
+
+						<div class="widget wid-links">
+							<div class="heading">
+								<h4>i食记目录</h4>
+							</div>
+							<div class="content">
+								<ul>
+									<li><a href="index.html">> 首页 </a></li>
+									<li><a href="易食记.html">> 菜谱</a></li>
+									<li><a href="index.html#逸食记">> 社区</a></li>
+									<li><a href="益食记.html">> 了解</a></li>
+									<li><a href="#">> 联系</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		
+		<footer>
+			<div class="wrap-footer">
+				<div class="container">
+						<div class="col-md-4 col-footer footer-3">
+									<div class="footer-heading">
+										<h4>美食活动精选</h4>
+									</div>
+									<div class="content">
+										<ul>
+											<li><a href="美食活动.html">野餐争霸战</a></li>
+											<li><a href="美食活动.html">厨房闪电侠</a></li>
+											<li><a href="美食活动.html">舌尖东南亚</a></li>
+											<li><a href="美食活动.html">便当侦探社</a></li>
+											<li><a href="美食活动.html">厨神江湖令</a></li>
+											<li><a href="美食活动.html">爱心投喂日</a></li>
+										</ul>
+									</div>
+								</div>
+						<div class="col-md-4 col-footer footer-2">
+							<div class="footer-heading">
+								<h4>关于我们</h4>
+							</div>
+							<div class="content"id="about">
+								<p>i食记，成立于2024年圣诞节，是一家专注于分享多元化美食做法及知识的菜谱网站。我们致力于为广大美食爱好者打造一个全面、专业且富有创意的美食学习与交流平台。<br />
+									我们诚邀您加入i食记的美食大家庭，一起成为美食达人！无论您是烹饪新手还是资深大厨，都能在i食记找到属于自己的舞台，展现厨艺才华和美食热情。</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-footer footer-3">
+							<div class="footer-heading">
+								<h4>标签</h4>
+							</div>
+							<div class="content">
+								<ul>
+									<li><a href="#">烹饪技巧</a></li>
+									<li><a href="#">美食菜谱</a></li>
+									<li><a href="#">原创内容</a></li>
+									<li><a href="#">健康饮食</a></li>
+									<li><a href="#">美食分享</a></li>
+									<li><a href="#">美食文化</a></li>
+									<li><a href="#">简易操作</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</footer>
+		<div class="coppy-right">
+			<div class="wrap-footer">
+				<div class="clearfix">
+					<div class="col-md-6 col-md-offset-3">
+						<p>Copyright &copy; 2024i食记 陕西省咸阳市秦都区陕西国际商贸学院信息工程学院</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<!-- Core JavaScript Files -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.backTop.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#backTop').backTop({
+					'position': 1200,
+					'speed': 500,
+					'color': 'red',
+				});
+			});
+		</script>
+		<script src="js/jquery.contact-buttons.js"></script>
+		<script src="js/demo.js"></script>
+	</body>
+</html>

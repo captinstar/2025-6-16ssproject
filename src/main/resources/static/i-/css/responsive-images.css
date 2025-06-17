@@ -1,0 +1,33 @@
+/* 确保图片在分辨率变化时保持比例 */
+.art-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* 确保图片居中 */
+}
+
+.art-content {
+    padding: 0;
+    margin: 0;
+    width: 100%; /* 确保占满父容器 */
+    box-sizing: border-box; /* 包括内边距在宽度内 */
+}
+
+.art-content ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; /* 去除默认列表样式 */
+}
+
+.art-content li {
+    margin: 0;
+    padding: 0;
+    display: flex; /* 使用 flex 布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: flex-start; /* 确保内容从左对齐 */
+}
+
+.col-md-8 {
+    padding-left: 0;ing-left: 0;
+    padding-right: 0;    padding-right: 0;
+}
